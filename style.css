@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f0e3df;
+}
+body,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+button {
+  background-color: #534439;
+  color: white;
+  border: 0;
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  padding: 8px;
+  border: 0;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #5e5e5e;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.app-header {
+  width: 100%;
+  text-align: center;
+  background: #a16c60;
+  color: #fff;
+  padding: 12px 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 24px auto;
+  height: 100%;
+}
+
+main .left-content {
+  width: 25%;
+}
+main .left-content .left-container {
+  padding: 0px 24px;
+}
+
+.filter,
+.input-book-container,
+.delete-button-container {
+  padding: 20px;
+  background: #fff7ed;
+  border-radius: 5px;
+}
+.filter,
+.input-book-container {
+  margin-bottom: 20px;
+}
+.filter button {
+  width: 100%;
+  border-radius: 5px;
+}
+.filter button:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.input-book-container h4,
+.filter h4 {
+  margin-bottom: 12px;
+}
+
+.input-book-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-book-container form input {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+form .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_inline label {
+  margin-right: 12px;
+  line-height: 1;
+}
+
+.input_inline input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  transform: scale(1.2);
+}
+.input-book-container form button,
+.delete-button-container button {
+  width: 100%;
+  border-radius: 5px;
+}
+
+main .right-content {
+  width: 100%;
+  padding: 24px;
+  height: 80vh;
+  background: #fff7ed;
+  border-radius: 5px;
+}
+main .right-content header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+main .right-content header h2 {
+  font-size: 28px;
+}
+main .right-content header p {
+  color: #889fa5;
+  font-weight: 550;
+}
+main .right-content .book-list-container {
+  height: 90%;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+#search-book {
+  display: flex;
+  flex-direction: row;
+}
+
+#search-book input {
+  border-radius: 5px 0 0 5px;
+}
+#search-book button {
+  width: 40px;
+  border-radius: 0 5px 5px 0;
+}
+
+.right-content .book-list-container table {
+  border-spacing: 0px 15px;
+  width: 100%;
+  min-width: 100%;
+}
+.book-list-container table th,
+.book-list-container table td {
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+
+.book-list-container table tr th:first-child,
+.book-list-container table tr td:first-child {
+  padding-left: 12px;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  text-align: center;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+table .book-detail {
+  display: flex;
+  flex-direction: row;
+}
+.book-detail img {
+  height: 100px;
+  margin-right: 12px;
+}
+
+.book-detail .detail-author {
+  color: #5e5e5e;
+}
+
+table .score-select {
+  width: 150px;
+  background-image: url(/assets/icon-star-score.png);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 80% 50%;
+}
+table .delete-button {
+  background-color: #b3514e;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+table .delete-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content h4 {
+  margin-bottom: 20px;
+}
+.modal-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.modal-button-container button {
+  border-radius: 5px;
+  border: 0;
+  width: 45%;
+}

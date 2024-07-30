@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="app-header"><h1>BookShelf App</h1></header>
+    <main>
+      <div class="left-content">
+        <div class="left-container">
+          <div class="filter">
+            <h4>Shelves</h4>
+            <button id="all-button">All</button>
+            <button id="completed-button">Completed</button>
+            <button id="uncompleted-button">Uncompleted</button>
+          </div>
+          <div class="input-book-container">
+            <h4>Add Books</h4>
+            <form action="" id="input-book">
+              <input
+                id="inputBookTitle"
+                type="text"
+                required
+                placeholder="Title"
+              />
+              <input
+                id="inputBookAuthor"
+                type="text"
+                required
+                placeholder="Author"
+              />
+              <input
+                id="inputBookYear"
+                type="number"
+                required
+                placeholder="2024"
+              />
+              <div class="input_inline">
+                <label for="inputBookIsComplete">Selesai dibaca?</label>
+                <input id="inputBookIsComplete" type="checkbox" value="false" />
+              </div>
+              <button id="bookSubmit" type="submit">
+                Masukkan ke Rak Buku
+              </button>
+            </form>
+          </div>
+          <div class="delete-button-container">
+            <button id="delete-books">Delete All Books</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <header>
+          <div>
+            <h2>All Books</h2>
+            <p>Showing <span id="book-count"></span> books</p>
+          </div>
+          <form id="search-book">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="search title/author"
+            />
+            <button id="searchSubmit" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </header>
+        <div class="book-list-container">
+          <table id="bookshelf">
+            <tr class="book-table-header" id="bookshelf-header">
+              <th>Book Detail</th>
+              <th>Year</th>
+              <th>Shelf</th>
+              <th>Delete</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
